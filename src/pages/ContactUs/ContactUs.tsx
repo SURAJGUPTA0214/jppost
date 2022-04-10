@@ -178,6 +178,14 @@ const ContactUs = (props: any) => {
                                 </div>
                             </div>
                         </div>
+                        <div>
+                         
+                            <iframe width="100%" height="450"
+                                style={{ border: '0px' }}
+                                src="https://www.google.com/maps/embed/v1/place?q=22.616257,88.384443&amp;key=AIzaSyBhuhdUUzs992lLPYvF9_bU7KTQTv3bHU4">
+                                
+                                </iframe>
+                        </div>
                     </div>
                 </div>
             </div>

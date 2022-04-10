@@ -7,7 +7,7 @@ a {
 img {
   max-width: 100%;
 }
-.theme_color {
+.theme_color, .activeRoute {
   color: #f56616 !important;
 }
 .hamburger-menu,
@@ -21,6 +21,10 @@ img {
   text-decoration: none;
   color: #fff;
   font-weight: 700;
+}
+.Nav_link:hover{
+  color: #f56616 !important;
+  cursor: pointer;
 }
 .scrolled {
   background: #ffffff;

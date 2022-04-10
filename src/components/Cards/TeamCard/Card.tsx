@@ -1,7 +1,7 @@
 import React from "react";
 import { makeStyles } from '@material-ui/styles';
 import marketing from "assets/images/marketing.svg";
-import { CardData } from "./CardData"
+import { TeamCardData } from "../ProfileCard/CardData";
 
 const useStyles = makeStyles(theme => ({
     featureblock: {
@@ -13,12 +13,13 @@ const useStyles = makeStyles(theme => ({
         marginBottom: '30px',
         '&:hover': {
             boxShadow: '0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%)',
+            border: 'dashed .6px #0b2849',
+            borderRadius:'20px'
         }
     },
     innerbox: {
         minHeight: '250px',
         transition: 'all 400ms ease-in-out',
-        padding: '40px 30px',
         position: 'relative',
         textAlign: 'center',
         overflow: 'hidden',
@@ -36,7 +37,12 @@ const useStyles = makeStyles(theme => ({
             height: '100%',
             transition: 'all 500ms ease-in-out',
             background: 'linear-gradient(-135deg, #f0ac0e 0%, #f56616 100%)',
+        },
+         '&:hover': {
+          
+            borderRadius:'20px'
         }
+     
     },
     icon: {
         position: 'relative',
@@ -45,13 +51,13 @@ const useStyles = makeStyles(theme => ({
     }
 }));
 
-const Card = () => {
+const TeamCard = () => {
     const classes = useStyles();
     return (
         <>
             {
-                CardData.map((item, index) => (
-                    <div className="col-lg-4 col-md-4" key={index}>
+                TeamCardData.map((item, index) => (
+                    <div className="col-lg-3 col-md-3" key={index}>
                         <div
                             className={classes.featureblock}
                             data-wow-delay="0s"
@@ -59,14 +65,12 @@ const Card = () => {
                         >
                             <div className={classes.innerbox}>
                                 <div className={classes.icon}>
-                                    {/* <img style={{ width: '40%' }} className="normal mx-auto" src={marketing} alt="" /> */}
-                                    {item?.icon}
-                                    
+                                    <img style={{ width: '100%' }} className="normal mx-auto" src="https://webtoolfeed.files.wordpress.com/2011/12/1.jpg" alt="" />
                                 </div>
                                 <div className="text">
-                                    <h4 className="card_heading">{item.heading}</h4>
+                                    <h4 className="card_heading">{item.name}</h4>
                                     <p>
-                                        {item.description}
+                                        {item.work}
                                     </p>
                                 </div>
                             </div>
@@ -77,4 +81,4 @@ const Card = () => {
         </>
     )
 }
-export default Card;
+export default TeamCard;

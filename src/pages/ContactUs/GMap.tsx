@@ -1,34 +1,53 @@
-import React, { Component } from 'react';
-// import GoogleMapReact from 'google-map-react';
+// import React, { Component } from 'react';
+// import {Map, GoogleApiWrapper} from 'google-maps-react';
 
-const AnyReactComponent = ({ text }: any) => <div>{text}</div>;
+// class GMap extends Component {
+ 
+//   render() {
+//     return (
+//       <Map
+//         style={{ width: '100%', height: '100%' }}
+        
+//           initialCenter={{
+//             lat: 22.616257,
+//             lng: 88.384443
+//         }}
+//         />
+//     );
+//   }
+// }
 
-class GMap extends Component {
-  // static defaultProps = {
-  //   center: {
-  //     lat: 59.95,
-  //     lng: 30.33
-  //   },
-  //   zoom: 11
-  // };
+// export default GoogleApiWrapper({
+//   apiKey: "AIzaSyBhuhdUUzs992lLPYvF9_bU7KTQTv3bHU4"
+// })(GMap)
 
-  render() {
-    return (
-      // Important! Always set the container height explicitly
-      <div style={{ height: '100vh', width: '100%' }}>
-        {/* <GoogleMapReact
-   
-          defaultZoom={11}
-        >
-          <AnyReactComponent
-            lat={59.955413}
-            lng={30.337844}
-            text="My Marker"
-          />
-        </GoogleMapReact> */}
-      </div>
-    );
-  }
+
+import React, {Component} from 'react'
+import {Map ,InfoWindow, Marker, GoogleApiWrapper, mapEventHandler, markerEventHandler} from 'google-maps-react';
+
+const mapStyle = {
+    width: '920px',
+    height: '500px'
 }
 
-export default GMap;
+export class GMap extends Component<{google:any}>{
+    // onMapClicked: mapEventHandler;
+    // onMarkerClick: markerEventHandler;
+    onInfoWindowClose: any;
+    // map?: google.maps.Map | google.maps.StreetViewPanorama
+
+    render(){
+        return(
+            <>
+              
+            </>
+        )
+    }
+}
+
+const GoogleMap = GoogleApiWrapper({
+    apiKey: "AIzaSyBhuhdUUzs992lLPYvF9_bU7KTQTv3bHU4"
+})(GMap)
+
+
+export default GoogleMap;

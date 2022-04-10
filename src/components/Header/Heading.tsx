@@ -40,8 +40,8 @@ const NavbarHeader = () => {
                                         <li key={i} className={classes.menuitems} >
                                             <NavLink
                                                 className="Nav_link"
-                                                activeClassName="activeRoute"
-                                                activeStyle={{ color: '#f56616' }}
+                                                activeClassName={(window.location.pathname===item.Link) ? "activeRoute" : ""}
+                                                // activeStyle={{ color: '#f56616' }}
                                                 to={item.Link}>{item.Title}
                                             </NavLink>
                                         </li>

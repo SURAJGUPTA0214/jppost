@@ -1,15 +1,18 @@
-import { HiOutlineDesktopComputer, GoDeviceMobile, FaShoppingCart, MdImportantDevices, AiOutlineSolution, BiCodeBlock,GiRoundTable ,GiRoundShield} from 'react-icons/all';
+import {GiOnTarget, GiBeastEye, RiHandHeartLine, HiOutlineDesktopComputer, GoDeviceMobile, FaShoppingCart, MdImportantDevices, AiOutlineSolution, BiCodeBlock,GiRoundTable ,GiRoundShield} from 'react-icons/all';
 export const CardData = [
     {
-        heading: "Marketing Automation",
+        icon: <GiOnTarget size={50} />,
+        heading: "Missson",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sagittis, quam ut consectetur semper, velit turpis"
     },
     {
-        heading: "Sales & CRM",
+        icon: <GiBeastEye size={50} />,
+        heading: "Vision",
         description: "Mauris commodo egestas odio, id ultrices felis. Fusce at tellus elit. Aliquam a hendrerit dui. Nunc in metus eu mauris"
     },
     {
-        heading: "Advanced Reporting",
+        icon: <RiHandHeartLine size={50} />,
+        heading: "Value",
         description: "Nunc mattis mollis mi ac dapibus. Vivamus eu bibendum neque, sed gravida sapien. Pellentesque tempus finibus justo."
     },
 ]
@@ -158,4 +161,47 @@ export const PlanCardData = [
 
         ]
     }
+]
+
+export const TeamCardData = [
+    {
+        icon: <GiOnTarget size={50} />,
+        name: "Tim Doe",
+        work: "Team Leader"
+    },
+    {
+        icon: <GiBeastEye size={50} />,
+        name: "Will Pollard",
+        work: "Software developer"
+    },
+    {
+        icon: <RiHandHeartLine size={50} />,
+        name: "Mark Admin",
+        work: "Mobile App Developer"
+    },
+     {
+        icon: <GiOnTarget size={50} />,
+        name: "Brain Lara",
+        work: "Team Leader"
+    },
+    {
+        icon: <GiBeastEye size={50} />,
+        name: "Will Pollard Ktm",
+        work: "Software developer"
+    },
+     {
+        icon: <GiOnTarget size={50} />,
+        name: "Tim Doe",
+        work: "Team Leader"
+    },
+    {
+        icon: <GiBeastEye size={50} />,
+        name: "Will Pollard",
+        work: "Software developer"
+    },
+    {
+        icon: <RiHandHeartLine size={50} />,
+        name: "Sandeep Hazara",
+        work: "Human Resource"
+    },
 ]

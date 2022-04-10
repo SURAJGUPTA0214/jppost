@@ -2,13 +2,7 @@ import Footer from "components/Footer/Footer";
 import NavbarHeader from "components/Header/Heading";
 import { makeStyles } from '@material-ui/styles';
 import clsx from "clsx";
-import CustomButton from "components/Buttons/CustomButton";
-import { Link } from "react-router-dom";
-import digitalmarkentingimg from "../../assets/images/digitalmarketingimg.png";
-import Card from "components/Cards/ProfileCard/Card";
-import List from "components/List/List";
-import Seoimg from "assets/images/seo-marketing-img.png";
-import HeroBanner from "components/HeroBanner/HeroBanner";
+import TeamCard from "components/Cards/TeamCard/Card";
 
 
 
@@ -19,22 +13,33 @@ const OurTeam = (props: any) => {
     return (
         <>
             <NavbarHeader />
-            <HeroBanner />
-            <section>
-                <div className="container">
-                    <div className="row">
-                        <div className={clsx(classes.casesWrap, "d-md-flex align-items-center")}>
-                            <img src="http://www.clarimanconsultants.com/images/Kartick-Saw.jpg" className={classes.img} />
-                            <div className="text pl-md-5">
-                                <span className="cat">Executive Director</span>
-                                <h2><hr style={{color:'#006699', border:'2px solid', width:'10%', float:'left', marginBottom:'0.5em'}} />&nbsp;&nbsp;RUPA SAHA</h2>
-                                <p>She is First ClassNclassName Graduate in Science. She has over 2 years of experience in the field of Accounting, Income Tax, Auditing, GST &amp; Statutory business compliances. She has served in industries like Healthcare, Trading Etc.</p>
-                            </div>
-						</div>
 
+                <div className="about-section section-padding pt-0" style={{ borderBottom: '1px solid #dee2e6' }}>
+                    <div className="container">
+                        <div className="row clearfix justify-content-center pt-5">
+                            <div className="col-lg-8">
+                                <div className="heading-wrapper with-separator text-center">
+                                    <h2 style={{ fontSize: '48px' }} className={clsx(classes.headingtext, "mobileheadings")}>
+                                        Meet Our <span className={classes.headingspan}>Crew Members</span>
+                                    </h2>
+                                    <p className="lead-text mt-4">
+                                    These are the people that make the magic happen.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div className="row clearfix a">
+                            <div className="col-md-12">
+                                <div className="mt-5 mb-5"></div>
+                            </div>
+                            <TeamCard />
+                            <div className="col-md-12">
+                                <div className="mt-5 mb-5"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </section>
            
 
            
@@ -46,44 +51,24 @@ export default OurTeam;
 
 
 const useStyles = makeStyles(theme => ({
-    casesWrap: {
-        width: '100%',
-        marginBottom: '30px',
-        '& .text': {
-            width: '100%',
-            paddingLeft:'3rem'
-        },
-        '& .text .cat': {
-            textTransform: 'uppercase',
-            color: '#004c72',
-            letterSpacing: '2px',
-            marginBottom: '10px',
-            fontSize: '14px',
-            display: 'inline-block',
-        },
-        '& .text h2': {
-            fontSize: '18px',
-            fontWeight: 700,
-            lineHeight: '1.5',
-            color: 'rgba(0, 0, 0, 0.8)',
-            marginBottom: '0.5rem',
-            fontFamily: 'inherit',
-        },
-          '& .text p': {
-            padding: '1em',
-            lineHeight: '25px',
-            marginTop: '0',
-            marginBottom: '1rem',
+
+     headingtext: {
+        fontWeight: 'bold',
+        letterSpacing: '-1px',
+        marginBottom: '18px',
+        '&::after': {
+            height: '6px',
+            width: '60px',
+            content: '""',
+            display: 'block',
+            marginTop: '18px',
+            background: 'linear-gradient(to right, #f0ac0e 0%, #f56616 100%)',
         }
     },
-    img: {
-        width: '100%',
-        height: '450px',
-        borderRadius: '4px',
-        backgroundSize: 'cover',
-         backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'center center',
-    }
-  
+      headingspan: {
+        color: '#f56616',
+        fontfamily: "'Alegreya', 'serif'",
+        fontStyle: 'italic',
+    },
 
 }))
